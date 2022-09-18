@@ -1,1 +1,45 @@
 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Logical Operator</title>
+</head>
+<h1>Find Your Result</h1>
+<body>
+<form class="form" onsubmit="LogicalOperator(); return false">
+    <a>Input Your Email, CNIC, and Contact No: </a>
+    <input type="text" id="UserInput">
+    <button>Submit</button>
+    <br>
+    <a>Your Result: <h3 id="result"></h3></a>
+</form>
+<script>
+    function LogicalOperator() {
+    let UserInput = document.querySelector("#UserInput").value;
+    let Email = "hamza@gmail.com";
+    let Contact =  "03363969545"
+    let CNIC = "4250123798475"
+    
+    result = Email + Contact + CNIC;
+    if ( UserInput === Email || UserInput === Contact || UserInput === CNIC)
+    {
+        let result="Result Found"
+        document.querySelector("#result").innerHTML=result;
+    }
+    else if (UserInput === Email && UserInput === Contact && UserInput === CNIC)
+    {
+        let result="Result Found"
+        document.querySelector("#result").innerHTML=result;
+    }
+
+    else {
+        let result="Result Not Found"
+        document.querySelector("#result").innerHTML=result;
+    }
+}
+</script>
+</body>
+</html>
